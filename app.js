@@ -17,7 +17,7 @@ window.onload = function() {
   src.appendChild(img);
 
   // Afterwards: 
-  // 1. 
+  // 1. + 2.
   var ul = document.getElementsByTagName("ul");
   
   ul[0].addEventListener('click', function(e) {
@@ -26,11 +26,8 @@ window.onload = function() {
       listItems[j].className = "";
     }  
     e.target.className = "selected";
+    document.querySelectorAll("img")[1].src = "./images/" + e.target.innerHTML + ".jpeg";
   });
-
-  // 2.
-  // var images = ["./images/beer.jpeg", "./images/honey.jpeg", "./images/milk.jpeg", "./images/water.jpeg", "./images/wine.jpeg"];
-  // var foodImg = document.getElementsByTagName("img");
 
   // 3.
   var grayDiv = document.getElementById("ghosting");
@@ -54,7 +51,7 @@ window.onload = function() {
   // 5.
   var resetButton = document.getElementById("reset");
 
-  resetButton.addEventListener('click', function(e) {
+  resetButton.addEventListener('click', function() {
     var listItems = document.getElementsByTagName("li");
     for (var k = 0; k < listItems.length; k++) {
       listItems[k].className = "";
@@ -64,6 +61,7 @@ window.onload = function() {
   });
 
   // 6.
+  // BONUS
   
 };
 
