@@ -61,7 +61,29 @@ window.onload = function() {
   });
 
   // 6.
+  var keyCodes = [48, 49, 50, 51, 52, 53, 54, 55, 56, 57];
+
+  window.addEventListener('keyup', function(e) {
+    for (var l = 0; l < keyCodes.length; l ++)
+    if (e.keyCode === keyCodes[l]) {
+      alert("I HATE NUMBERZZZ!");
+    }
+  });
+
   // BONUS
+  var idx = 0;
+
+  window.addEventListener('keyup', function(e) {
+    var konamiCode = [38,38,40,40,37,39,37,39,66,65];
+    if (e.keyCode === konamiCode[idx]) {
+      idx++;
+      if (idx === konamiCode.length) {
+        alert("YOU ARE AN EVENT HANDLER GURUUUUUUUUU!");
+      } 
+    } else {
+      idx = 0;
+    }
+  });
   
 };
 
